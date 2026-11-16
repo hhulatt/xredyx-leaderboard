@@ -1,11 +1,11 @@
 {
-  "startsOn": "2026-12-01",
-  "cycle": "2026-12-01",
-  "periodStart": "2026-12-01",
-  "periodEnd": "2026-12-31",
+  "cycle": "2026-11-01",
+  "periodStart": "2026-11-01",
+  "periodEnd": "2026-11-30",
   "cycleMode": "monthly",
   "cycleStartDay": 1,
   "timezone": "Europe/London",
+  "fullUsernames": true,
   "prizePool": 250,
   "prizes": [
     100,
@@ -18,7 +18,7 @@
   "totalWagered": 0,
   "playerCount": 0,
   "cacheUpdatedAt": null,
-  "updatedAt": "2026-11-16T15:53:31.419Z",
+  "updatedAt": "2026-11-16T16:41:10.885Z",
   "entries": [],
-  "_seed": "Placeholder written by new-creator.mjs so the page renders before the first scheduled refresh. The workflow overwrites this."
+  "startsOn": "2026-12-01"
 }
