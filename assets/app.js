@@ -246,7 +246,14 @@
            </button></td></tr>`
       : '';
 
-    tbody.innerHTML = rows + toggle;
+    const prelaunchNotice = board?.prelaunchPreview && board?.startsOn
+      ? `<tr class="lb__notice"><td colspan="4">
+           Competition starts on <strong>${escapeHtml(longDate(board.startsOn))}</strong> —
+           wagers below are a preview only and will not count toward prizes.
+         </td></tr>`
+      : '';
+
+    tbody.innerHTML = prelaunchNotice + rows + toggle;
     const btn = $('toggle-all');
     if (btn) btn.addEventListener('click', () => { showingAll = !showingAll; renderRows(entries); });
   }

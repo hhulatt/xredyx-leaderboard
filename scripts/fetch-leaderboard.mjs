@@ -281,16 +281,26 @@ const today = todayInTz();
  * the index of closed periods from what is actually on disk.
  */
 async function refresh({ label, dir, file, cycle, previous, prizes, boardSize, firstCycle, periodOf, mode }) {
-  // firstCycle guards the live board as well as the archive. Wagers placed
-  // before the competition opened are not competition entries.
+  // firstCycle guards the archive. The live board still fetches real data
+  // before launch so viewers can see current wagers; a prelaunchPreview flag
+  // tells the site to show a notice that prizes do not apply yet.
   const beforeLaunch = firstCycle && cycle.id < firstCycle;
-  const board = beforeLaunch
-    ? preLaunchBoard(cycle, prizes, boardSize, mode)
-    : buildBoard(await fetchCycle(cycle), cycle, prizes, boardSize, mode);
+  let board;
+  if (beforeLaunch) {
+    try {
+      const payload = await fetchCycle(cycle);
+      board = { ...buildBoard(payload, cycle, prizes, boardSize, mode), startsOn: firstCycle, prelaunchPreview: true };
+      console.log(`${label} ${cycle.start}..${cycle.end} pre-launch preview (starts ${firstCycle}): ${board.playerCount} players, $${board.totalWagered} wagered`);
+    } catch (err) {
+      console.warn(`${label} pre-launch data fetch failed: ${err.message} — falling back to empty board`);
+      board = preLaunchBoard(cycle, prizes, boardSize, mode);
+      console.log(`${label} ${cycle.start}..${cycle.end} empty pre-launch board`);
+    }
+  } else {
+    board = buildBoard(await fetchCycle(cycle), cycle, prizes, boardSize, mode);
+    console.log(`${label} ${cycle.start}..${cycle.end}: ${board.playerCount} players, $${board.totalWagered} wagered`);
+  }
   await writeJson(join(ROOT, 'data', file), board);
-  console.log(beforeLaunch
-    ? `${label} ${cycle.start}..${cycle.end} is before the first cycle (${firstCycle}) — empty board, nothing fetched`
-    : `${label} ${cycle.start}..${cycle.end}: ${board.playerCount} players, $${board.totalWagered} wagered`);
 
   const archivePath = join(ROOT, 'data', dir, `${previous.id}.json`);
   let stale = false;

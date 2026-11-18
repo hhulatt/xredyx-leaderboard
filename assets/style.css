@@ -663,6 +663,7 @@ tr.is-top .lb__rank { background: var(--gold-a16); color: var(--gold); }
 .lb__prize { color: var(--gold); font-weight: 700; }
 .lb__prize--none { color: var(--muted); font-weight: 400; }
 .lb__empty td { text-align: center; color: var(--muted); padding: 2.5rem 1rem; }
+.lb__notice td { text-align: center; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--fg); font-size: .85rem; padding: .6rem 1rem; border-bottom: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); }
 tr.is-you {
   background: var(--accent-a16) !important;
   box-shadow: inset 3px 0 0 var(--accent);
