@@ -370,10 +370,10 @@ section { scroll-margin-top: 90px; }
   margin-left: 0.4rem;
   vertical-align: middle;
   padding: 0;
-  border: 1px solid var(--line);
+  border: 2px solid var(--accent);
   border-radius: 50%;
-  background: var(--panel);
-  color: var(--muted);
+  background: var(--accent-a10);
+  color: var(--accent-lit);
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
