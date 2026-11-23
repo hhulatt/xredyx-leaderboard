@@ -15,10 +15,10 @@
     20
   ],
   "boardSize": 25,
-  "totalWagered": 20877.22,
+  "totalWagered": 20985.8,
   "playerCount": 22,
-  "cacheUpdatedAt": "2026-11-22 04:18:12",
-  "updatedAt": "2026-11-22T04:18:12.347Z",
+  "cacheUpdatedAt": "2026-11-23 03:40:23",
+  "updatedAt": "2026-11-23T03:40:23.680Z",
   "entries": [
     {
       "rank": 1,
@@ -38,21 +38,21 @@
       "rank": 3,
       "masked": "Viivk",
       "hash": "a754cda74ff77c40",
-      "wagered": 3380.87,
+      "wagered": 3381.52,
       "prize": 40
     },
     {
       "rank": 4,
       "masked": "missbridie",
       "hash": "ee3752b6b9ffa3b3",
-      "wagered": 3150.22,
+      "wagered": 3153.09,
       "prize": 30
     },
     {
       "rank": 5,
       "masked": "DJNS",
       "hash": "cfcceb8a5ad4808b",
-      "wagered": 694.09,
+      "wagered": 695.38,
       "prize": 20
     },
     {
@@ -66,28 +66,28 @@
       "rank": 7,
       "masked": "danielusx",
       "hash": "80022544280ae026",
-      "wagered": 444.19,
+      "wagered": 444.49,
       "prize": 0
     },
     {
       "rank": 8,
       "masked": "sava222",
       "hash": "781170dfefbebb2a",
-      "wagered": 345.29,
+      "wagered": 350.24,
       "prize": 0
     },
     {
       "rank": 9,
       "masked": "sextos007",
       "hash": "ca796ee6ada2d15e",
-      "wagered": 227.79,
+      "wagered": 227.81,
       "prize": 0
     },
     {
       "rank": 10,
       "masked": "Sosso27",
       "hash": "0877a446ab2bf451",
-      "wagered": 87.25,
+      "wagered": 185.75,
       "prize": 0
     },
     {
