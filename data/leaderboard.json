@@ -15,10 +15,10 @@
     20
   ],
   "boardSize": 25,
-  "totalWagered": 21385.96,
+  "totalWagered": 21385.97,
   "playerCount": 22,
-  "cacheUpdatedAt": "2026-11-24 06:54:52",
-  "updatedAt": "2026-11-24T06:54:52.919Z",
+  "cacheUpdatedAt": "2026-11-24 07:44:37",
+  "updatedAt": "2026-11-24T07:44:37.974Z",
   "entries": [
     {
       "rank": 1,
@@ -80,7 +80,7 @@
       "rank": 9,
       "masked": "sextos007",
       "hash": "ca796ee6ada2d15e",
-      "wagered": 227.88,
+      "wagered": 227.9,
       "prize": 0
     },
     {
